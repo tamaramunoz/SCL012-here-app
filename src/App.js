@@ -1,7 +1,7 @@
 // import React from 'react';
 // import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 // import MapView from './components/MapView';
-// // import Layout from './viwes/Layout';
+// import Layout from './viwes/Layout';
 // import Home from './viwes/Home';
 // import Navbar from './viwes/Navbar';
 // import New from './viwes/NewPag';
