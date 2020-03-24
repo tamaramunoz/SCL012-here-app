@@ -10,12 +10,10 @@ const MapView = () => {
             {/*<DisplayMapClass/>*/}
             <DisplayMapFC/>
             {/*<Localization />*/}
-
-
             </>
 
-        </Fragment>
-     );
-}
+//         </Fragment>
+//      );
+// }
  
-export default MapView;
+// export default MapView;
