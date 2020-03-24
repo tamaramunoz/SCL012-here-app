@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react';
 // import {DisplayMapClass} from "./DisplayMapClass";
 import {DisplayMapFC} from "./DisplayMapFC";
-
+//import { Localization } from "./mapExample"
 
 const MapView = () => {
     return ( 
@@ -9,6 +9,9 @@ const MapView = () => {
             <>
             {/*<DisplayMapClass/>*/}
             <DisplayMapFC/>
+            {/*<Localization />*/}
+
+
             </>
 
         </Fragment>
