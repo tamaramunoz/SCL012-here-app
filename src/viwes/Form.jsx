@@ -2,7 +2,7 @@ import React from'react';
 
 
 
-class BadgeForm extends React.Component{
+class Form extends React.Component{
     state={};
     
     handleClick = e => {
@@ -59,4 +59,4 @@ handleSubmit = e=>{
         );
     }
 }
-export default BadgeForm;
+export default Form;

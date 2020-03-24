@@ -1,10 +1,10 @@
 import React from 'react';
-import '../styles/BadgeNew.css';
-import Navbar from'../viwes/Navbar';
-import BadgeForm from '../viwes/BadgetForm';
-import  Badges from '../viwes/Badget';
+import '../styles/New.css';
+import Navbar from'./Navbar';
+import Form from './Form';
+import  Home from './Home';
 
-class BadgeNew extends React.Component{
+class New extends React.Component{
   render(){
     return(
       <div>
@@ -13,12 +13,12 @@ class BadgeNew extends React.Component{
         <div className="container">
           <div className="row">
             <div className="col-6">
-              <Badges
+              <Home
                   avatarUrl="https://vinti7.com/wp-content/uploads/2016/04/logos-de-perros-92.jpg"
                   />
             </div>
             <div className="col-6">
-            <BadgeForm onChange={this.handleChange} />
+            <Form onChange={this.handleChange} />
             </div>
           </div>
         </div>
@@ -27,4 +27,4 @@ class BadgeNew extends React.Component{
   }
 }
 
-export default BadgeNew;
+export default New;
