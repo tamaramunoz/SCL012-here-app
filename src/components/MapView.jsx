@@ -14,8 +14,8 @@ const MapView = () => {
 
             </>
 
-        </Fragment>
-     );
-}
+//         </Fragment>
+//      );
+// }
  
-export default MapView;
+// export default MapView;

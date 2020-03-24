@@ -1,9 +1,9 @@
-// src/DisplayMapFC.js
-import * as React from 'react';
+// // src/DisplayMapFC.js
+// import * as React from 'react';
 
-export const DisplayMapFC = () => {
-  // Create a reference to the HTML element we want to put the map on
-  const mapRef = React.useRef(null);
+// export const DisplayMapFC = () => {
+//   // Create a reference to the HTML element we want to put the map on
+//   const mapRef = React.useRef(null);
 
   const addMarkersAndSetViewBounds = ()  =>{
     // create map objects
@@ -41,16 +41,16 @@ export const DisplayMapFC = () => {
       pixelRatio: window.devicePixelRatio || 1
     });
 
-    // const behavior = new H.mapevents.Behavior(new H.mapevents.MapEvents(hMap));
+//     // const behavior = new H.mapevents.Behavior(new H.mapevents.MapEvents(hMap));
 
-    // const ui = H.ui.UI.createDefault(hMap, defaultLayers);
+//     // const ui = H.ui.UI.createDefault(hMap, defaultLayers);
 
-    // This will act as a cleanup to run once this hook runs again.
-    // This includes when the component un-mounts
-    return () => {
-      hMap.dispose();
-    };
-  }, [mapRef]); // This will run this hook every time this ref is updated
+//     // This will act as a cleanup to run once this hook runs again.
+//     // This includes when the component un-mounts
+//     return () => {
+//       hMap.dispose();
+//     };
+//   }, [mapRef]); // This will run this hook every time this ref is updated
 
   return <div className="map" ref={addMarkersAndSetViewBounds(mapRef)} style={{ height: "500px" }} />;
 };
