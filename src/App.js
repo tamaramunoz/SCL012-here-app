@@ -1,17 +1,21 @@
 import React, { Fragment } from 'react';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import { Provider } from 'react-redux';
+import PropTypes from 'prop-types';
+
+
 import './styles/Navbar.css';
 import logo from './viwes/imagen/logo.jpeg';
-import MapView from './components/MapView';
 import NewPag from './viwes/NewPag'
-// import Layout from './viwes/Layout';
-// import Home from './viwes/Home';
-// import Navbar from './viwes/Navbar';
-// import New from './viwes/NewPag';
-// import Form from './viwes/Form';
 
-function App() {
-    return (
+
+import Maps from './pages/maps';
+import Results from './pages/results';
+
+const App = ({ store })  => (
+
+<Provider store={store}>
+
         <Fragment>
             <Router>
                 <div className="Navbar">
@@ -26,20 +30,30 @@ function App() {
                         <li className="nav-item">
                             <Link to="/" className="nav-link">Home</Link>
                         </li>
-                        
+                     
                         <li className="nav-item">
-                            <Link to="/map" className="nav-link">Mapa</Link>
+                            <Link to="/maps" className="nav-link">Mapas</Link>
+                        </li>
+                        <li className="nav-item">
+                            <Link to="/results" className="nav-link">Resultados</Link>
                         </li>
 
                     </div>
                 </div>
 
                 <Route exact path="/" component={NewPag} />
-                <Route path="/map" component={MapView} />
+               
+                <Route path="/maps" component={Maps} />
+				<Route path = "/results" component={Results}/>
 
             </Router>
         </Fragment>
-    );
-}
+</Provider>
+);
+
+
+App.propTypes = {
+	store: PropTypes.object.isRequired
+};
 
 export default App;

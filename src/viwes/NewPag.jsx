@@ -1,6 +1,6 @@
 import React from 'react';
 import '../styles/New.css';
-import Form from './Form';
+//import Form from './Form';
 import Home from './Home';
 
 class New extends React.Component {
@@ -9,15 +9,15 @@ class New extends React.Component {
       <div>
         <div className="BadgeNew__hero"></div>
         <div className="container">
-          <div className="row">
-            <div className="col-6">
+          <div className="columm">
+            <div className="col-12">
               <Home
                 avatarUrl="https://vinti7.com/wp-content/uploads/2016/04/logos-de-perros-92.jpg"
               />
             </div>
-            <div className="col-6">
-              <Form onChange={this.handleChange} />
-            </div>
+              {/*<div className="col-6">
+            <Form onChange={this.handleChange} />
+            </div>*/ }
           </div>
         </div>
       </div>
