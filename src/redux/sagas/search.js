@@ -6,8 +6,9 @@ import { apiCall } from '../api';
 
 export function* searchPlace({ payload}){
     try{
-      const results = yield call (apiCall, `&s=${payload.movieName}`, null, null, 'GET');
+      const results = yield call (apiCall, `&s=${payload.Name}`, null, null, 'GET');
       yield put({ type: SEARCH_PLACE_COMPLETE, results});
+
 
     }catch (error){
       yield put({ type: SEARCH_PLACE_ERROR, error});
@@ -19,3 +20,5 @@ export function* searchPlace({ payload}){
 export default function* search() {
     yield takeLatest(SEARCH_PLACE_START, searchPlace);
 };
+
+console.log(searchPlace)
