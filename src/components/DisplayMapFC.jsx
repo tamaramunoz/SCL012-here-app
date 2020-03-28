@@ -16,7 +16,7 @@ export const DisplayMapFC = () => {
     const H = window.H;
 
     const platform = new H.service.Platform({
-        apikey: "{RqK-OcugnqqgZRc1eiZ5DTMzhQwGCqFHGzCzy6vuNPg}"
+        apikey: "{D0q9uku4PfaL9gJtiIsF-OzqBPCPCHguQqSupgbhMhY}"
     });
 
     const defaultLayers = platform.createDefaultLayers();

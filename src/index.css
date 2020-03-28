@@ -1,1 +1,5 @@
 
+.leaflet-container {
+    height: 98vw;
+    width: 98vw;
+  }

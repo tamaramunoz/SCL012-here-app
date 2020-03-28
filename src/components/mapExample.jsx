@@ -1,8 +1,6 @@
 import React from 'react'
-import { Map, TileLayer}
-const hereCredentials = {
-  apiKey: '06Xbckql-JVdM5xLN3eJia30CBj-IxRqHmj8kJxxyLQ'
-}
+import { Map, TileLayer, Marker, Popup } from 'react-leaflet'
+
     
 class MapHere extends React.Component{
 
@@ -15,8 +13,7 @@ class MapHere extends React.Component{
   }
   render(){
 
-    const hereTileURL= 'https://1.base.maps.ls.hereapi.com/maptile/2.1/maptile/newest/normal.day/13/4400/2686/256/png8
-    ?apiKey={hereCredentials.apiKey}'
+    const hereTileURL= 'https://1.base.maps.ls.hereapi.com/maptile/2.1/maptile/newest/normal.day/13/4400/2686/256/png8?apiKey={06Xbckql-JVdM5xLN3eJia30CBj-IxRqHmj8kJxxyLQ}'
 
     const center = [22.286394, 114.149139];
     const zoom = 16;
@@ -37,3 +34,4 @@ class MapHere extends React.Component{
   }
   
 }
+export default MapHere
