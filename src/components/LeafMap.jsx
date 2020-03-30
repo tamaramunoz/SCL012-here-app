@@ -1,28 +1,37 @@
 import React from 'react';
-import { Map, TileLayer, Marker, Popup } from 'react-leaflet'
+import { Card, CardHeader, CardContent, TextField , Typography } from '@material-ui/core';
+import MapContainer from './MapContainer';
 
-const hereCredentials = {
-    id: 'o8EpULhhcyysRJ7oY07L',
-    key: 'kSUp4BM5FUYJrZLmTzjxf1bj-2Rmt_SJWHr6xIaxCig'
-}
 
 function LeafMap() {
 
-const hereTileUrl = `https://1.base.maps.ls.hereapi.com/maptile/2.1/maptile/newest/reduced.day/{z}/{x}/{y}/512/png8?apiKey=kSUp4BM5FUYJrZLmTzjxf1bj-2Rmt_SJWHr6xIaxCig &api:320`;
-const center = [-33.4569397,  -70.6482697];  // {lat, lng}
-const zoom = 16;
+
+  const center = [-33.4569397, -70.6482697];  // {lat, lng}
+  const zoom = 16;
+  const viewport = true;
 
   return (
-    <Map 
-      center={center} 
-      zoom={zoom}>
 
-        <TileLayer
-          attribution="&copy; Here 2019"
-          url={hereTileUrl}
+
+
+    <Card >
+      <CardHeader action={<TextField  id="filled-basic" label="Search" variant="filled"  />} />
+  
+      <CardContent>
+
+        <MapContainer
+          center={center}
+          zoom={zoom}
+          viewport={viewport}
         />
+   
+        <Typography variant="body2" color="textSecondary" component="p">
+          This impressive paella is a perfect party dish and a fun meal to cook together with your
+          guests. Add 1 cup of frozen peas along with the mussels, if you like.
+        </Typography>
+      </CardContent>
+    </Card>
 
-      </Map>
 
   );
 }
