@@ -17,11 +17,11 @@ class Badges extends React.Component{
                    <h2 className="Badge__footer">
                    <span>¿Vamos a dar un paseo?</span>
                         </h2> 
-                </div>               
                 </div>
-            </div>
-
-        );
-    }
+                </div>
+                </div>
+    
+    ); 
+ }   
 }
 export default Badges; 

@@ -1,6 +1,5 @@
 .navbar {
   width: 100%;
-  position: sticky;
   background-color:#FDCA6E;
 }
 
@@ -34,8 +33,5 @@ a.nav-link{
 }
 
 @media all and (max-width: 480px) {
-Button{
-  width: calc(1px + 2vmin);
-  font-size: calc(.5px + 2vmin)
-}
+
 }
