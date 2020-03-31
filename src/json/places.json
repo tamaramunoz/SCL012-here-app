@@ -1,0 +1,115 @@
+[
+    {   
+        "key": "marker1",
+        "position": [-33.438194, -70.642138],
+        "content": "Wonderland Café",
+        "type": "cafe"
+    },
+
+    {
+        "key": "marker2",
+        "position": [-33.4370183, -70.6436618],
+        "content": "Café da Lucia",
+        "type": "cafe"
+    },
+
+    {
+        "key": "marker3",
+        "position": [-33.4374349, -70.6419652],
+        "content": "Colmado Coffee",
+        "type": "cafe"
+    },
+
+    {
+        "key": "marker4",
+        "position": [-33.4435671, -70.6147247],
+        "content": "Dachshund Coffee",
+        "type": "cafe"
+    },
+
+    {
+        "key": "marker5",
+        "position": [-33.4401366, -70.6228782],
+        "content": "La Gata Horacia Café",
+        "type": "cafe"
+    },
+
+    {
+        "key": "marker6",
+        "position": [-33.439117, -70.6064566],
+        "content": "Bar Valdivia",
+        "type": "bar"
+    },
+
+    {
+        "key": "marker7",
+        "position": [-33.4365653, -70.6082703],
+        "content": "Cafetería Naif",
+        "type": "cafe"
+    },
+
+    {
+        "key": "marker8",
+        "position": [-33.4403529, -70.6273322],
+        "content": "Rice and Roll Restaurant",
+        "type": "restaurante"
+    },
+
+    {
+        "key": "marker9",
+        "position": [-33.4469866, -70.625705],
+        "content": "Lusitano Restaurante",
+        "type": "restaurante"
+    },
+
+    {
+        "key": "marker10",
+        "position": [-33.430936, -70.622553],
+        "content": "Bar Kleine Kneipe",
+        "type": "bar"
+    },
+
+    {
+        "key": "marker11",
+        "position": [-33.4290462, -70.5926258],
+        "content": "Espresso Bar",
+        "type": "bar"
+    },
+
+    {
+        "key": "marker12",
+        "position": [-33.4216498, -70.6058502],
+        "content": "La Cafeta",
+        "type": "cafe"
+    },
+
+    {
+        "key": "marker13",
+        "position": [-33.4291956, -70.5926827],
+        "content": "Sabor de Buenos Aires Café",
+        "type": "cafe"
+    },
+
+    {
+        "key": "marker14",
+        "position": [-33.4407509, -70.5920007],
+        "content": "Rende Bú Restaurante",
+        "type": "restaurante"
+    },
+
+    {
+        "key": "marker15",
+        "position": [-33.4381431, -70.5781578],
+        "content": "Ubuntu Café",
+        "type": "cafe"
+    },
+
+    {
+        "key": "marker16",
+        "position": [-33.4441337, -70.6255336],
+        "content": "El Camino Restaurante",
+        "type": "restaurante"
+    }
+
+    
+]
