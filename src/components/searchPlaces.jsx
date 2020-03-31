@@ -88,30 +88,10 @@ function autoCompleteListener(textBox, event) {
             ajaxRequest.send();
         }
     }
-    /*query = textBox.value;
+    query = textBox.value;
 }
 
 
 /**
  *  This is the event listener which processes the XMLHttpRequest response returned from the server.
- */
-/*function onAutoCompleteSuccess() {
-    /*
-     * The styling of the suggestions response on the map is entirely under the developer's control.
-     * A representitive styling can be found the full JS + HTML code of this example
-     * in the functions below:
-     */
-    /*clearOldSuggestions();
-    addSuggestionsToPanel(this.response);  // In this context, 'this' means the XMLHttpRequest itself.
-    addSuggestionsToMap(this.response);
-}
-
-
-/**
- * This function will be called if a communication error occurs during the XMLHttpRequest
- */
-/*function onAutoCompleteFailed() {
-    alert('Ooops!');
-}*/
-
-}
+*/
