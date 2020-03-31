@@ -1,11 +1,12 @@
 import React, { Fragment, useState, useEffect } from 'react';
 import {Card} from '@material-ui/core'
 import MapContainer from './MapContainer'
-import Geolocalization from './Geolocalization'
 import IconBreadcrumbs from './breadCrumbs'
-
+import useGeolocation from 'react-hook-geolocation'
 
 function LeafMap() {
+
+  const geolocation = useGeolocation()
 
   const [locals, setLocals] = useState([]);
 
@@ -18,12 +19,8 @@ function LeafMap() {
     const infoPetPlaces = await data.json()
     setLocals(infoPetPlaces)
   }
-
-  const latlng = {
-    lat: -33.4190702,
-    lng: -70.6418162,
-  }
-
+  
+  const latlng = { lat: geolocation.latitude, lng: geolocation.longitude, }
   let center = latlng;  // {lat, lng}
   const zoom = 16;
 
@@ -36,7 +33,6 @@ function LeafMap() {
           zoom={zoom}
           locals={locals}
         />
-        <Geolocalization></Geolocalization>
       </div>
       <Card>
       <IconBreadcrumbs/>
