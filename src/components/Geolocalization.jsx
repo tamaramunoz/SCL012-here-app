@@ -1,10 +1,14 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import useGeolocation from 'react-hook-geolocation'
 
-const Geolocalization = () => {
+const  Geolocalization  = () => {
+
+  useEffect(() => {
+    onGeolocationUpdate()
+  }, [])
 
     const onGeolocationUpdate = geolocation => {
-        console.log('Here’s some new data from the Geolocation API: ', geolocation)
+        // console.log('Here’s some new data from the Geolocation API: ', geolocation)
       }
     
     const geolocation = useGeolocation({}, onGeolocationUpdate)
