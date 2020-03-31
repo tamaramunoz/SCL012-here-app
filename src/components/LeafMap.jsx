@@ -1,6 +1,9 @@
 import React, { Fragment, useState, useEffect } from 'react';
+import {Card} from '@material-ui/core'
 import MapContainer from './MapContainer'
 import Geolocalization from './Geolocalization'
+import IconBreadcrumbs from './breadCrumbs'
+
 
 function LeafMap() {
 
@@ -15,7 +18,7 @@ function LeafMap() {
     const infoPetPlaces = await data.json()
     setLocals(infoPetPlaces)
   }
-  
+
   const latlng = {
     lat: -33.4190702,
     lng: -70.6418162,
@@ -26,6 +29,7 @@ function LeafMap() {
 
   return (
     <Fragment>
+
       <div className="container-map">
         <MapContainer
           center={center}
@@ -34,6 +38,9 @@ function LeafMap() {
         />
         <Geolocalization></Geolocalization>
       </div>
+      <Card>
+      <IconBreadcrumbs/>
+      </Card>
     </Fragment>
   );
 }

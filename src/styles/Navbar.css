@@ -31,6 +31,14 @@ a.nav-link{
 .nav-link{
   padding: .1rem 9rem;
 }
+.footer{
+  width: 100%;
+  position: relative;
+  clear: both;
+  margin-top: 0px;
+  padding-top: 0px;
+  overflow: scroll;
+}
 
 @media all and (max-width: 480px) {
 

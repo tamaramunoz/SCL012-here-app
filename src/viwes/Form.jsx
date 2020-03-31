@@ -16,10 +16,12 @@ class Form extends React.Component {
     render() {
         return (
             <div >
-
+                    
                 <div className="container">
                     <div className="col col-lg-6">
-                        <h1>Iniciar Sesión</h1>
+                 
+                       {/*<h1>Iniciar Sesión</h1>*/}
+            
                         <form onSubmit={this.handleSubmit}>
                             <div className="form-group">
                                 <label> Nombre</label>

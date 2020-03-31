@@ -1,23 +1,27 @@
 import React, { Fragment } from 'react';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import './styles/Navbar.css';
+import './App.css'
 import LeafMap from './components/LeafMap';
 // import MapView from './components/MapView';
 import NewPag from './viwes/NewPag'
 import Form from './viwes/Form';
 
+
+
 function App() {
     return (
         <Fragment>
+            <header className='header' ></header>
             <Router>
                 <div>
                     <Route exact path="/" component={NewPag} />
                     <Route path="/map" component={LeafMap} />
                     <Route path="/Form" component={Form} />
-
+                 
                     <footer className="footer">
                     <div className="navbar navbar-fixed-bottom">
-                        <div className="container-fluid flex-column flex-lg-row">
+                        <div className="container-fluid  flex-lg-row">
 
                             <ul className="Lin-Home">
 

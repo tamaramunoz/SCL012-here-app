@@ -3,6 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@material-ui/core": "^4.9.8",
+    "@material-ui/icons": "^4.9.1",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
     "@testing-library/user-event": "^7.2.1",
@@ -11,8 +13,8 @@
     "react": "^16.13.1",
     "react-bootstrap": "^1.0.0",
     "react-dom": "^16.13.1",
-    "react-here-maps": "^0.4.0",
     "react-firebase": "^2.2.8",
+    "react-here-maps": "^0.4.0",
     "react-hook-geolocation": "^1.0.6",
     "react-leaflet": "^2.6.3",
     "react-router-dom": "^5.1.2",
