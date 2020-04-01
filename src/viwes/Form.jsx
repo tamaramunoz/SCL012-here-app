@@ -1,7 +1,7 @@
 import React from 'react';
 import '../styles/Form.css';
 import Logs from './imagen/niña.png';
-
+import {Button} from '@material-ui/core'
 
 class Form extends React.Component {
     state = {};
@@ -55,9 +55,11 @@ class Form extends React.Component {
                                 />
                             </div>
 
-                            <button
+                            <Button
+                                variant="contained"
+                                href="/map"
                                 onClick={this.handleClick}
-                                className="btn btn-primary">Save</button>
+                                >Save</Button>
                         </form>
                     </div>
 

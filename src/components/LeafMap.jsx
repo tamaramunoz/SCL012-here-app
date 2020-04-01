@@ -1,9 +1,11 @@
-import React, { Fragment, useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import '../styles/New.css'
+import{ Button } from '@material-ui/core'
 
 import MapContainer from './MapContainer'
 import IconBreadcrumbs from './breadCrumbs'
 import useGeolocation from 'react-hook-geolocation'
+
 
 function LeafMap() {
 
@@ -20,18 +22,13 @@ function LeafMap() {
     const infoPetPlaces = await data.json()
     setLocals(infoPetPlaces)
   }
-<<<<<<< HEAD
 
   const latlng = [-33.4374349, -70.6419652]
-=======
-  
-  const latlng = { lat: geolocation.latitude, lng: geolocation.longitude, }
->>>>>>> e42175fbe5fdc5b77143232e10a02abd8a741ee5
-  let center = latlng;  // {lat, lng}
+  const center = latlng;  // {lat, lng}
   const zoom = 16;
 
   return (
-    <Fragment>
+    <>
 
       <div className="container-map">
         <MapContainer
@@ -39,14 +36,21 @@ function LeafMap() {
           zoom={zoom}
           locals={locals}
         />
+        <div className="container-medio">
+          <h2>a donde vamos?</h2>
+        </div>
+  
         <div className="container-options">
-
           <IconBreadcrumbs />
         </div>
+        <div className='container-medio'>
+          <Button color='inherit' variant='contained'>buscar lugares cercanos</Button>
+        </div>
+   
       </div>
 
 
-    </Fragment>
+    </>
   );
 }
 

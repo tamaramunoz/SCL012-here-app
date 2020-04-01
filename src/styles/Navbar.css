@@ -14,30 +14,27 @@ li.nav-item{
 
 div.container-fluid{
   display: flex;
-  color: rgb(7, 6, 6);
+
   align-items: center;
+  justify-content: space-around;
+  background-color:#FDCA6E;
 }
 
 a.nav-link{
   font-family: 'Visby CF Medium';
   font-size: 20px;
-  color: #2F3543;
+  color: rgb(32, 27, 27);
   display: flex;
   align-items: center;
-  margin-top: 20px;
+
   list-style: none;
 }
 
 .nav-link{
   padding: .1rem 10rem;
-}
-.footer{
-height: 150vh;
-  position: fixed;
-  clear: both;
-  margin-top: 50px;
-  padding-top: 0px;
 
+  display: flex;
+  
 }
 
 @media all and (max-width: 480px) {
