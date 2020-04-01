@@ -1,6 +1,8 @@
+
 import React, { useState, useEffect } from 'react';
 import '../styles/New.css'
 import{ Button } from '@material-ui/core'
+
 
 import MapContainer from './MapContainer'
 import IconBreadcrumbs from './breadCrumbs'
@@ -36,6 +38,7 @@ function LeafMap() {
           zoom={zoom}
           locals={locals}
         />
+
         <div className="container-medio">
           <h2>a donde vamos?</h2>
         </div>
@@ -51,6 +54,7 @@ function LeafMap() {
 
 
     </>
+
   );
 }
 

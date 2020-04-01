@@ -56,6 +56,7 @@ export default function CustomizedInputBase() {
     </Paper>
   );
 }
+
 const AUTOCOMPLETION_URL = 'https://autocomplete.geocoder.ls.hereapi.com/6.2/suggest.json',
 ajaxRequest = new XMLHttpRequest(),
 query = '';

@@ -32,9 +32,8 @@ a.nav-link{
 
 .nav-link{
   padding: .1rem 10rem;
-
   display: flex;
-  
+
 }
 
 @media all and (max-width: 480px) {

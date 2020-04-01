@@ -16,9 +16,11 @@ const useStyles = makeStyles((theme: Theme) =>
       display: 'flex',
     },
     icon: {
+
       marginRight: theme.spacing(3.5),
       width: 60,
       height: 70,
+
     },
   }));
 
@@ -32,7 +34,9 @@ export default function IconBreadcrumbs() {
 
   return (
     <>
+
     <Breadcrumbs separator=''>
+
       <Link color="inherit" href="/" onClick={handleClick} className={classes.link}>
         <RestoIcon className={classes.icon} />
 
