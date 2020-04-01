@@ -29,15 +29,15 @@ a.nav-link{
 }
 
 .nav-link{
-  padding: .1rem 9rem;
+  padding: .1rem 10rem;
 }
 .footer{
-  width: 100%;
-  position: relative;
+height: 150vh;
+  position: fixed;
   clear: both;
-  margin-top: 0px;
+  margin-top: 50px;
   padding-top: 0px;
-  overflow: scroll;
+
 }
 
 @media all and (max-width: 480px) {

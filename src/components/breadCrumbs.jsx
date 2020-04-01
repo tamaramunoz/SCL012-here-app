@@ -1,11 +1,14 @@
 import React from 'react';
 import { makeStyles, Theme, createStyles } from '@material-ui/core/styles';
-import Typography from '@material-ui/core/Typography';
-import Breadcrumbs from '@material-ui/core/Breadcrumbs';
+
+import { Breadcrumbs } from '@material-ui/core'
 import Link from '@material-ui/core/Link';
-import HomeIcon from '@material-ui/icons/Home';
-import WhatshotIcon from '@material-ui/icons/Whatshot';
-import GrainIcon from '@material-ui/icons/Grain';
+
+
+import  PubIcon  from '../icons/pubIcon';
+import  CoffeIcon  from '../icons/cooffeIcon';
+import  RestoIcon  from '../icons/restoIcon'
+
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -13,12 +16,11 @@ const useStyles = makeStyles((theme: Theme) =>
       display: 'flex',
     },
     icon: {
-      marginRight: theme.spacing(0.5),
-      width: 20,
-      height: 20,
+      marginRight: theme.spacing(7.5),
+      width: 50,
+      height: 50,
     },
-  }),
-);
+  }));
 
 function handleClick(event: React.MouseEvent<HTMLAnchorElement, MouseEvent>) {
   event.preventDefault();
@@ -29,10 +31,11 @@ export default function IconBreadcrumbs() {
   const classes = useStyles();
 
   return (
-    <Breadcrumbs aria-label="breadcrumb">
+    <>
+    <Breadcrumbs>
       <Link color="inherit" href="/" onClick={handleClick} className={classes.link}>
-        <HomeIcon className={classes.icon} />
-        Material-UI
+        <RestoIcon className={classes.icon} />
+
       </Link>
       <Link
         color="inherit"
@@ -40,13 +43,14 @@ export default function IconBreadcrumbs() {
         onClick={handleClick}
         className={classes.link}
       >
-        <WhatshotIcon className={classes.icon} />
-        Core
+        <CoffeIcon className={classes.icon} />
+      
       </Link>
-      <Typography color="textPrimary" className={classes.link}>
-        <GrainIcon className={classes.icon} />
-        Breadcrumb
-      </Typography>
+      <Link color="inherit" href="" onClick={handleClick} className={classes.link}>
+      <PubIcon className={classes.icon} />
+      </Link>
+
     </Breadcrumbs>
+    </>
   );
 }

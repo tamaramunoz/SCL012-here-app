@@ -60,13 +60,14 @@ class Form extends React.Component {
                                 className="btn btn-primary">Save</button>
                         </form>
                     </div>
-                    <div className="Avatar">
+
+                </div>
+                <div className="Avatar">
                         <img className="img-fluid Form-ava"
                             src={Logs}
                             alt="avatar" />
 
                     </div>
-                </div>
             </div>
         );
 
