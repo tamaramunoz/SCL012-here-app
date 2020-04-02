@@ -1,4 +1,4 @@
-import React, {Fragment} from 'react';
+import React, { Fragment } from 'react';
 import logo from '../viwes/imagen/niña.png';
 import '../styles/Login.css';
 import firebase from '../firebase/conFirebase';
@@ -15,8 +15,8 @@ class Login extends React.Component {
       password: ''
       // al estado le colocamos que es verdadero con sus parametros 
     }
-    
-  
+
+
   }
   // los eventos de cada metodo se dara aca, para indicarle que debe buscar cada evento 
   Name(event) {
@@ -35,10 +35,10 @@ class Login extends React.Component {
   singUpNewUser = (email, password, name) => {
 
     firebase.auth().createUserWithEmailAndPassword(this.state.email, this.state.password)
-     //firebase crea el nuevo usuario con email y password 
+      //firebase crea el nuevo usuario con email y password 
       .then(() => {
-        this.setState({ estado:false });
-// 
+        this.setState({ estado: false });
+        // 
       })
       .catch((error) => {
         // Handle Errors here.
@@ -51,54 +51,57 @@ class Login extends React.Component {
         }
         console.log(errorCode);
         console.log(errorMessage);
-       
+
       });
   };
   render() {
-      //le colocamos una condicion para que si el estado de es true muestre el evento del metodo 
-    if(this.state.estado){
+    //le colocamos una condicion para que si el estado de es true muestre el evento del metodo 
+    if (this.state.estado) {
       return (
         <div className="container2">
-            <h5>Registro de nuevo usuario</h5>
-          <div className="form-group">
-          <input type="text" 
-          className="form-control input" 
-          placeholder="Nombre de usuario"
+          <h5 className="sign-in">Registrarse</h5>
+
+          <div className="form-group 2">
+            <input type="text"
+              className="form-control input"
+              placeholder="Nombre de usuario"
               value={this.state.name}
-               onChange={this.Name.bind(this)} 
-               />
-            <input 
-            type="text"
-             className="form-control input" 
-             placeholder="Email"
-              value={this.state.email} 
-              onChange={this.Email.bind(this)} 
-              />
-            <input 
-            type="text" 
-            className="form-control input" 
-            placeholder="Contraseña"
+              onChange={this.Name.bind(this)}
+            />
+            <input
+              type="text"
+              className="form-control input"
+              placeholder="Email"
+              value={this.state.email}
+              onChange={this.Email.bind(this)}
+            />
+            <input
+              type="text"
+              className="form-control input"
+              placeholder="Contraseña"
               value={this.state.password}
-               onChange={this.Password.bind(this)} 
-               />
+              onChange={this.Password.bind(this)}
+            />
           </div>
-            <button 
-            type="submit" 
-            className="btn btn-primar"
-             id="registrar" 
-              onClick={this.singUpNewUser}>
-                  Registrarme
+          <button
+            type="submit"
+            className="btn-register"
+            id="registrar"
+            onClick={this.singUpNewUser}>
+            Registrarme
             </button>
-            <img
+            <div className="avatar-register-container">
+          <img
             alt="logo"
             src={logo}
-            className="logoE" />
+            className="avatar-register" />
+            </div>
         </div>
       )
     }
     return (
       <Fragment>
-        {this.state.estado? null:<Form/>}
+        {this.state.estado ? null : <Form />}
       </Fragment>
     )
   }

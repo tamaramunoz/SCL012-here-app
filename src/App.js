@@ -21,10 +21,10 @@ function App() {
                     <Route path="/Form" component={Form} />
 
                     <footer className="footer">
-                        <div className="navbar navbar-fixed-bottom">
-                            <div className="container-fluid  flex-lg-row">
 
-                                <ButtonGroup>
+                    
+                                <ButtonGroup variant="contained" className="fixed-bottom">
+                                <div className="container-fluid  flex-xs-row">
 
                                     <Button color="warning">
                                         <Link to="/Form" className="nav-link">Iniciar Sesión</Link>
@@ -34,12 +34,10 @@ function App() {
                                         <Link to="/LogIn" className="nav-link">Registrame</Link>
                                     </Button >
 
-                                    <Button color="warning" >
-                                        <Link to="/" className="nav-link">Home</Link>
-                                    </Button >
+                                    </div>
                                 </ButtonGroup >
-                            </div>
-                        </div>
+                            
+                   
                     </footer>
                 </div>
 

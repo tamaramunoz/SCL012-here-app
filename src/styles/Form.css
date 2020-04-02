@@ -1,70 +1,52 @@
 .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     font-family: 'Visby CF Medium';
     margin-top: 40px;
     width: 100%;
-    padding-right: 15px;
-    padding-left: 15px;
-    margin-right: auto;
-    margin-left: auto;
 }
 
-img.img-fluid.Form-ava{
-    min-width: 40%;
-    box-sizing: border-box;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.form-control {
+  background-color: #f4e3e3!important;
+}
+
+.sign-in {
+  text-align: center;
+  color: #2f3543;
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+
+.avatar-container {
+  margin-top: 25px;
+  margin-left: 30%;
+}
+
+.avatar {
+  width: 50%;
 }
 
 button#registrar.btn.btn-primar{
-  width: 48%;
-    margin-top: 7%;
-    margin-left: 7%;
-    border-color: rgba(194, 104, 19, 0.822);
-    color: rgba(194, 104, 19, 0.822);
-}
-
-.h1{
-  margin-bottom: .5rem;
-    font-weight: 500;
-    line-height: 1.2;
-    margin-left: 11%;
+    width: 48%;
+    margin-left: 25%;
+    border-color: #2f3543;
+    color: #2f3543;
 }
 
 
+@media (min-width:200px) and (max-width:800px) {
 
-@media (min-width:200px) and (max-width:800px){
-    .containerPer{
-      display: inline-grid;
-      margin-left: 17%;
-      background-color: rgba(238, 244, 247, 0.473);
-      margin-top:10%;
-      width:68%;
-    }
-    .logoSesion{
-      margin-left: 11%
-    }
-    .h5{
-      color: steelblue;
-      text-align: center;
-      margin-top: 12%;
-    }
-    .contInput {
-      margin-top:9%;
-    }
-    
-    .input {
-      width: 71%;
-      text-align: center;   
-      background-color:rgba(194, 104, 19, 0.822);   
-      color: white;
-      margin-left: 13%;
-      margin-top:1%;
-    }
-    #registrar{
-      width: 48%;
-      margin-top: 7%;
-      margin-left: 25%;
-    }
+  .avatar-container {
+    margin-top: 30px;
+    margin-left: 20%;
   }
+
+  .avatar {
+    width: 75%;
+  }
+  
+
+
+}
 
