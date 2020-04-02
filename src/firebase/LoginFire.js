@@ -1,6 +1,6 @@
 import React, {Fragment} from 'react';
 import logo from '../viwes/imagen/niña.png';
-import '../styles/Init.css';
+import '../styles/Login.css';
 import firebase from '../firebase/conFirebase';
 import Form from '../viwes/Form';
 
@@ -60,23 +60,23 @@ class Login extends React.Component {
       return (
         <div className="container2">
             <h5>Registro de nuevo usuario</h5>
-          <div className="contin">
+          <div className="form-group">
           <input type="text" 
-          className="input" 
+          className="form-control input" 
           placeholder="Nombre de usuario"
               value={this.state.name}
                onChange={this.Name.bind(this)} 
                />
             <input 
             type="text"
-             className="input" 
+             className="form-control input" 
              placeholder="Email"
               value={this.state.email} 
               onChange={this.Email.bind(this)} 
               />
             <input 
             type="text" 
-            className="input" 
+            className="form-control input" 
             placeholder="Contraseña"
               value={this.state.password}
                onChange={this.Password.bind(this)} 
