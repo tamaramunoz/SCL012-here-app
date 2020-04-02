@@ -37,14 +37,10 @@ function autoCompleteListener(textBox, event) {
     query = textBox.value;
 }
 
-
 /**
  *  This is the event listener which processes the XMLHttpRequest response returned from the server.
 */
-
-
-
-    return (
+return (
         <div>
             
         </div>
