@@ -25,3 +25,11 @@ Los perros de asistencia emocional son piezas claves para personas con este tipo
 Cada día se experimenta más con este tipo de terapia y cada vez son más los pacientes que encuentran una salida en ella, lamentablemente esta práctica no es parte de la legalidad y no está incluída en aspectos de movilidad e inclusión en la ciudad.
 
 Por lo tanto, es aquí donde nosotras hacemos nuestra intervención y aporte a esta necesidad.
+
+
+### Desarrollado por:
+
+- UX: Nataly Cuevas
+- Front: Rena Rivero
+- Front: Veronica Urrutia
+- Front: Tamara Muñoz
