@@ -19,14 +19,14 @@ class Form extends React.Component {
     handleEmai(event) {
         this.setState(
             { email: event.target.value });
-        console.log(this.state.email, 'emailfunciona')
+        // console.log(this.state.email, 'emailfunciona')
 
     }
     //es evanto que guarda la contraseña que se introdusca en el metodo inpu
     handlePassword(event) {
         this.setState(
             { password: event.target.value });
-        console.log(this.state.email, 'ingresando clave')
+        // console.log(this.state.email, 'ingresando clave')
     }
     // funcion que inicia la secion de usuario
     singInUser = () => {
@@ -68,7 +68,7 @@ class Form extends React.Component {
                             <input
                                 className="form-control"
                                 placeholder="Ingresar Contraseña"
-                                type="text"
+                                type="password"
                                 name="firstName"
                                 onChange={this.handlePassword.bind(this)}
                                 value={this.state.password}

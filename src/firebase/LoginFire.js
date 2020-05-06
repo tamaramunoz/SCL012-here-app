@@ -16,20 +16,19 @@ class Login extends React.Component {
       // al estado le colocamos que es verdadero con sus parametros 
     }
 
-
   }
   // los eventos de cada metodo se dara aca, para indicarle que debe buscar cada evento 
   Name(event) {
     this.setState({ name: event.target.value });
-    console.log(this.state.name, ' nombre')
+    // console.log(this.state.name, ' nombre')
   }
   Email(event) {
     this.setState({ email: event.target.value });
-    console.log(this.state.email, 'email ')
+    // console.log(this.state.email, 'email ')
   }
   Password(event) {
     this.setState({ password: event.target.value });
-    console.log(this.state.password, 'password')
+    // console.log(this.state.password, 'password')
   }
   //nuevo usuario para la app//
   singUpNewUser = (email, password, name) => {
