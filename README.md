@@ -2,7 +2,7 @@
 
 ### Descripción de la App
 
-![Logo Pet Places](src/viwes/imagen/LOGO.png)
+![Logo Pet Places](src/viwes/imagen/isotipo-readme.png)
 
 Pet places es una App mobile diseñada para dar solución en el contexto de la movilidad e inclusión en la ciudad de personas que presenten algún tipo de trastorno adaptativo y que necesiten estar acompañada constantemente de su mascota de contención emocional.
 
