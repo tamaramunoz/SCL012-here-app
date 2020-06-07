@@ -3,6 +3,8 @@ import '../styles/Login.css'
 import { auth, db } from '../backend/firebase'
 import { withRouter } from 'react-router-dom'
 
+import Nina from '../views/imagen/niña.png'
+
 
 const Login = (props) => {
 
@@ -147,6 +149,9 @@ const Login = (props) => {
                     </div>
                 </div>
 
+                <div className="avatar-register-container">
+                    <img src={Nina} alt="Imagen de registro de usuarios" className="avatar-register" />
+                </div>
 
             </div>
         </Fragment>

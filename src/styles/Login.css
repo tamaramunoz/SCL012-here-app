@@ -9,6 +9,11 @@
   font-family: 'Raleway', sans-serif;
 }
 
+.header-login p{
+  position: absolute;
+  font-size: 18px;
+}
+
 .main-login-container{
   display: flex;
   flex-direction: column;
@@ -23,12 +28,13 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-top: 15%;
 }
 
 .inputLogin {
   background-color: #f4e3e3;
   border-style: none;
-  border-radius: 10px;
+  border-radius: 5px;
   padding: 10px;
   margin-bottom: 10px;
   width: 100%;
@@ -37,7 +43,7 @@
 
 .buttonLogin {
   border-style: none;
-  border-radius: 10px;
+  border-radius: 5px;
   background-color: #FDCA6E;
   padding: 10px;
   margin-bottom: 10px;

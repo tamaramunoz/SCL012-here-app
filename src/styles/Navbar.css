@@ -2,32 +2,3 @@
   width: 100%;
   background-color:#FDCA6E;
 }
-
-li.nav-item{
-  list-style: none;
-}
-
-.Lin-Home {
-  display: flex;
-}
-
-div.container-fluid{
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  background-color:#FDCA6E;
-}
-
-a.nav-link{
-  font-family: 'Raleway', sans-serif;
-  font-size: 16px;
-  display: flex;
-  align-items: center;
-  list-style: none;
-}
-
-.nav-link{
-  display: flex;
-  color: #2f3543;
-}
-
