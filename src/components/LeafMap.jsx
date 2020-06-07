@@ -1,10 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import '../styles/New.css'
-import { Button } from '@material-ui/core'
 
 import MapContainer from './MapContainer'
-import IconBreadcrumbs from './breadCrumbs'
 import useGeolocation from 'react-hook-geolocation'
+
 
 
 function LeafMap() {
@@ -23,12 +22,26 @@ function LeafMap() {
     setLocals(infoPetPlaces)
   }
 
+    // const getData = async () => {
+    //   try {
+    //     const data = await db.collection('locales').get()
+    //     const arrayData = data.docs.map(doc => ({ id: doc.id, ...doc.data() }))
+    //     console.log(arrayData);
+    //     // setLocals(arrayData)
+
+    //   } catch (error) {
+    //     console.log(error)
+    //   }
+    // }
+
+
   const latlng = { lat: geolocation.latitude, lng: geolocation.longitude, }
   const center = latlng;  // {lat, lng}
   const zoom = 16;
 
   return (
     <>
+    <header className='header' ></header>
 
       <div className="container-map">
         <MapContainer
@@ -41,11 +54,9 @@ function LeafMap() {
           <h2 className="where-go">¿A dónde vamos?</h2>
         </div>
 
-        <div className="container-options">
-          <IconBreadcrumbs />
-        </div>
+
         <div className='container-medio'>
-          <Button color='inherit' variant='contained'>Buscar lugares cercanos</Button>
+          <button>Buscar lugares cercanos</button>
         </div>
 
       </div>

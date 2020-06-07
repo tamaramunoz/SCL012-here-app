@@ -1,35 +1,49 @@
-.container2 {
+.header-login{
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  width: 100%;
+  height: 8vh;
+  background-color:#FDCA6E;
+  color: #2F3543;
+  font-family: 'Raleway', sans-serif;
+}
+
+.main-login-container{
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
+  padding: 20px;
   font-family: 'Raleway', sans-serif;
-  margin-top: 40px;
-  width: 100%;
 }
 
+.form-login-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 
-.form-control {
+.inputLogin {
+  background-color: #f4e3e3;
+  border-style: none;
+  border-radius: 10px;
+  padding: 10px;
   margin-bottom: 10px;
+  width: 100%;
+  font-size: 14px;
 }
 
-.btn-register {
-display: inline-block;
-    font-weight: 400;
-    color: #212529;
-    text-align: center;
-    vertical-align: middle;
-    cursor: pointer;
-    -webkit-user-select: none;
-    user-select: none;
-    background-color: transparent;
-    border: 1px solid transparent;
-    padding: .375rem .75rem;
-    font-size: 1rem;
-    line-height: 1.5;
-    border-radius: .25rem;
-    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
-    border-color: #2f3543;
-    color: #2f3543;
+.buttonLogin {
+  border-style: none;
+  border-radius: 10px;
+  background-color: #FDCA6E;
+  padding: 10px;
+  margin-bottom: 10px;
+  color: #2F3543;
+  width: 100%;
+  font-size: 14px;
 }
 
 .avatar-register-container {
