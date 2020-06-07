@@ -1,6 +1,5 @@
 import React, { Fragment } from 'react'
 import { Map, TileLayer, Marker, Popup } from 'react-leaflet'
-import CustomizedInputBase from './searchPlaces'
 
 
 const MapContainer = (props) => {
@@ -9,7 +8,6 @@ const MapContainer = (props) => {
 
     return (
         <Fragment>
-            <CustomizedInputBase />
             <Map
                 center={props.center}
                 zoom={props.zoom}

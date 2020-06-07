@@ -17,7 +17,7 @@ function LeafMap() {
   }, [])
 
   const getData = async () => {
-    const data = await fetch('https://raw.githubusercontent.com/tamaramunoz/SCL012-here-app/master/src/json/places.json')
+    const data = await fetch('https://raw.githubusercontent.com/tamaramunoz/SCL012-here-app/master/src/backend/places.json')
     const infoPetPlaces = await data.json()
     setLocals(infoPetPlaces)
   }
