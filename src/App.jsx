@@ -1,7 +1,8 @@
-import React, { Fragment } from 'react';
+import React, { Fragment, useState, useEffect } from 'react';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import './styles/Navbar.css';
 import './App.css'
+import { auth } from './backend/firebase'
 
 import Login from './components/Login'
 import LeafMap from './components/LeafMap';
@@ -10,7 +11,20 @@ import Footer from './components/Footer';
 
 function App() {
 
-    return (
+    const [firebaseUser, setFirebaseUser] = useState(false)
+
+    useEffect(() => {
+        auth.onAuthStateChanged(user => {
+            console.log(user);
+            if(user){
+                setFirebaseUser(user)
+            }else{
+                setFirebaseUser(null)
+            }
+        })
+    }, [])
+
+    return firebaseUser !== false ? (
         <Fragment>
             <Router>
                 <Switch>
@@ -25,10 +39,12 @@ function App() {
 
                 </Switch>
 
-                <Footer />
+                <Footer firebaseUser={firebaseUser} />
             </Router>
         </Fragment>
-    );
+    ) : ( 
+        <p>Loading...</p>
+    )
 }
 
 export default App;

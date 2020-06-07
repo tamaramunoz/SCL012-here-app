@@ -1,20 +1,37 @@
 import React, { useState, useEffect } from 'react';
 import '../styles/New.css'
+import { auth } from '../backend/firebase'
+import { withRouter } from 'react-router-dom'
 
 import MapContainer from './MapContainer'
 import useGeolocation from 'react-hook-geolocation'
 
 
-
-function LeafMap() {
+const LeafMap = (props) => {
 
   const geolocation = useGeolocation()
 
   const [locals, setLocals] = useState([]);
+  const [user, setUser] = useState(null)
 
   useEffect(() => {
+
+    if(auth.currentUser){
+      // console.log('existe un usuario');
+      setUser(auth.currentUser)
+
+    }else{
+      // console.log('no existeeeeee');
+      props.history.push('/login')
+    }
+
     getData()
-  }, [])
+
+  }, [props.history])
+
+  // useEffect(() => {
+  //   getData()
+  // }, [])
 
   const getData = async () => {
     const data = await fetch('https://raw.githubusercontent.com/tamaramunoz/SCL012-here-app/master/src/backend/places.json')
@@ -51,6 +68,11 @@ function LeafMap() {
         />
 
         <div className="container-medio">
+          {
+            user && (
+              <p>{user.email}</p>
+            )
+          }
           <h2 className="where-go">¿A dónde vamos?</h2>
         </div>
 
@@ -67,4 +89,4 @@ function LeafMap() {
   );
 }
 
-export default LeafMap;    
+export default withRouter(LeafMap)
