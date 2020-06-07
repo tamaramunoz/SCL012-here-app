@@ -39,6 +39,7 @@ const Login = (props) => {
     }
 
     const login = useCallback(async () => {
+
         try {
             const res = await auth.signInWithEmailAndPassword(mail, password)
             console.log(res.user);
@@ -62,7 +63,9 @@ const Login = (props) => {
 
     }, [mail, password, props.history])
 
+
     const registrar = useCallback(async () => {
+
         try {
             const res = await auth.createUserWithEmailAndPassword(mail, password)
             // console.log(res.user);

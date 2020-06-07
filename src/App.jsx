@@ -8,6 +8,7 @@ import Login from './components/Login'
 import LeafMap from './components/LeafMap';
 import NewPag from './views/NewPag'
 import Footer from './components/Footer';
+import Loading from './components/Loading';
 
 function App() {
 
@@ -16,9 +17,9 @@ function App() {
     useEffect(() => {
         auth.onAuthStateChanged(user => {
             console.log(user);
-            if(user){
+            if (user) {
                 setFirebaseUser(user)
-            }else{
+            } else {
                 setFirebaseUser(null)
             }
         })
@@ -32,19 +33,16 @@ function App() {
                     <Route path="/login">
                         <Login />
                     </Route>
-                    <Route path="/register">
-                        Sign Up
-                    </Route>
-                    <Route path="/map" component={LeafMap} />
 
+                    <Route path="/map" component={LeafMap} />
                 </Switch>
 
                 <Footer firebaseUser={firebaseUser} />
             </Router>
         </Fragment>
-    ) : ( 
-        <p>Loading...</p>
-    )
+    ) : (
+            <Loading />
+        )
 }
 
 export default App;

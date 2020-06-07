@@ -1,0 +1,21 @@
+.loading-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Raleway', sans-serif;
+}
+
+.logo-loading {
+    margin-top: 100px;
+}
+
+.title-loading{
+    margin-bottom: 30px;
+    color: #2F3543;
+}
+
+.spin {
+    margin-bottom: 30px;
+    color: #FDCB6E;
+}
