@@ -1,8 +1,8 @@
-## Pet Places
+# Pet Places
 
-### Descripción de la App
+## Descripción de la App
 
-![Logo Pet Places](src/viwes/imagen/isotipo-readme.png)
+![Logo Pet Places](https://github.com/tamaramunoz/SCL012-here-app/blob/master/src/views/imagen/isotipo-readme.png?raw=true)
 
 Pet places es una App mobile diseñada para dar solución en el contexto de la movilidad e inclusión en la ciudad de personas que presenten algún tipo de trastorno adaptativo y que necesiten estar acompañada constantemente de su mascota de contención emocional.
 
@@ -27,7 +27,7 @@ Cada día se experimenta más con este tipo de terapia y cada vez son más los p
 Por lo tanto, es aquí donde nosotras hacemos nuestra intervención y aporte a esta necesidad.
 
 
-### Desarrollado por:
+## Desarrollado por:
 
 - UX: Nataly Cuevas
 - Front: Rena Rivero
