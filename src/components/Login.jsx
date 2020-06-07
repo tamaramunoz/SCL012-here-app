@@ -1,35 +1,95 @@
-import React, { Fragment, useState } from 'react'
+import React, { Fragment, useState, useCallback } from 'react'
 import '../styles/Login.css'
+import { auth, db } from '../backend/firebase'
+import { withRouter } from 'react-router-dom'
 
 
-const Login = () => {
+const Login = (props) => {
 
     const [mail, setMail] = useState('')
     const [password, setPassword] = useState('')
     const [error, setError] = useState(null)
-    const [isRegister, setIsRegister] = useState(true)
+    const [isRegister, setIsRegister] = useState(false)
 
     const procesarDatos = (e) => {
         e.preventDefault()
-        if(!mail.trim()){
+        if (!mail.trim()) {
             setError('Ingrese email')
             return
         }
 
-        if(!password.trim()){
+        if (!password.trim()) {
             setError('Ingrese contraseña')
             return
         }
 
-        if(password.length < 6){
+        if (password.length < 6) {
             setError('Ingrese contraseña mayor a 6 carácteres')
             return
         }
 
         setError(null)
-        console.log('Pasando todas las validaciones');
+        // console.log('Pasando todas las validaciones');
+
+        if (isRegister) {
+            registrar()
+        } else {
+            login()
+        }
     }
 
+    const login = useCallback(async () => {
+        try {
+            const res = await auth.signInWithEmailAndPassword(mail, password)
+            console.log(res.user);
+
+            setMail('')
+            setPassword('')
+            setError(null)
+
+            props.history.push('/map')
+
+        } catch (error) {
+            console.log(error);
+            if (error.code === 'auth/user-not-found') {
+                setError('Usuario no registrado')
+            }
+
+            if (error.code === 'auth/wrong-password') {
+                setError('Contraseña incorrecta')
+            }
+        }
+
+    }, [mail, password, props.history])
+
+    const registrar = useCallback(async () => {
+        try {
+            const res = await auth.createUserWithEmailAndPassword(mail, password)
+            // console.log(res.user);
+
+            await db.collection('usuarios').doc(res.user.email).set({
+                email: res.user.email,
+                uid: res.user.uid
+            })
+
+            setMail('')
+            setPassword('')
+            setError(null)
+
+            props.history.push('/map')
+
+        } catch (error) {
+            console.log(error);
+            if (error.code === 'auth/invalid-email') {
+                setError('Email no válido')
+            }
+
+            if (error.code === 'auth/email-already-in-use') {
+                setError('Este correo ya está en uso')
+            }
+        }
+
+    }, [mail, password, props.history])
 
     return (
         <Fragment>
@@ -90,4 +150,4 @@ const Login = () => {
     )
 }
 
-export default Login
+export default withRouter(Login)

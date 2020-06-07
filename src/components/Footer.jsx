@@ -11,7 +11,7 @@ const Footer = () => {
                             Iniciar Sesión
                         </Link>
 
-                        <Link className="btn" to="/register">
+                        <Link className="btn" to="/login">
                             Registrarse
                         </Link>
 
