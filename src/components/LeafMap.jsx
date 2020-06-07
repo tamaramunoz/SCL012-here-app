@@ -5,6 +5,7 @@ import { withRouter } from 'react-router-dom'
 
 import MapContainer from './MapContainer'
 import useGeolocation from 'react-hook-geolocation'
+import Navbar from './Navbar';
 
 
 const LeafMap = (props) => {
@@ -16,11 +17,11 @@ const LeafMap = (props) => {
 
   useEffect(() => {
 
-    if(auth.currentUser){
+    if (auth.currentUser) {
       // console.log('existe un usuario');
       setUser(auth.currentUser)
 
-    }else{
+    } else {
       // console.log('no existeeeeee');
       props.history.push('/login')
     }
@@ -39,17 +40,17 @@ const LeafMap = (props) => {
     setLocals(infoPetPlaces)
   }
 
-    // const getData = async () => {
-    //   try {
-    //     const data = await db.collection('locales').get()
-    //     const arrayData = data.docs.map(doc => ({ id: doc.id, ...doc.data() }))
-    //     console.log(arrayData);
-    //     // setLocals(arrayData)
+  // const getData = async () => {
+  //   try {
+  //     const data = await db.collection('locales').get()
+  //     const arrayData = data.docs.map(doc => ({ id: doc.id, ...doc.data() }))
+  //     console.log(arrayData);
+  //     // setLocals(arrayData)
 
-    //   } catch (error) {
-    //     console.log(error)
-    //   }
-    // }
+  //   } catch (error) {
+  //     console.log(error)
+  //   }
+  // }
 
 
   const latlng = { lat: geolocation.latitude, lng: geolocation.longitude, }
@@ -58,7 +59,7 @@ const LeafMap = (props) => {
 
   return (
     <>
-    <header className='header' ></header>
+      <Navbar />
 
       <div className="container-map">
         <MapContainer
