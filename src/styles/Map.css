@@ -1,0 +1,70 @@
+.leaflet-container {
+  height: 100vh;
+  width: 100vw;
+}
+
+.container-map {
+  display: flex;
+  flex-direction: column;
+  font-family: 'Raleway', sans-serif;
+  height: 300px;
+}
+
+.container-medio{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #2F3543;
+  font-family: 'Raleway', sans-serif;
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
+.where-go {
+  font-size: 20px;
+}
+
+.container-options{
+ display: flex;
+ flex-wrap: wrap;
+ justify-content: space-evenly;
+ align-items: center;
+}
+
+.optionIcono{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #999999;
+  font-size: 12px;
+  line-height: inherit;
+  cursor: pointer;
+}
+
+.containerButtonMedio{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 15px;
+}
+
+.lookForPlace{
+  font-family: 'Raleway', sans-serif;
+  background-color: #F6E4E4;
+  color: #2F3543;
+  border-style: none;
+  border-radius: 8px;
+  padding: 10px;
+  width: 90%;
+}
+
+@media all and (max-width: 350px) {
+
+  .container-map {
+    height: 250px;
+  }
+
+}

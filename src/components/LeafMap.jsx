@@ -1,11 +1,15 @@
 import React, { useState, useEffect } from 'react';
-import '../styles/New.css'
-import { auth } from '../backend/firebase'
+import '../styles/Map.css'
+import { auth, db } from '../backend/firebase'
 import { withRouter } from 'react-router-dom'
 
 import MapContainer from './MapContainer'
 import useGeolocation from 'react-hook-geolocation'
 import Navbar from './Navbar';
+
+import restaurant from '../icons/donde-restaurantes.png'
+import cafe from '../icons/donde-cafeterias.png'
+import bar from '../icons/donde-bares.png'
 
 
 const LeafMap = (props) => {
@@ -30,28 +34,11 @@ const LeafMap = (props) => {
 
   }, [props.history])
 
-  // useEffect(() => {
-  //   getData()
-  // }, [])
-
   const getData = async () => {
     const data = await fetch('https://raw.githubusercontent.com/tamaramunoz/SCL012-here-app/master/src/backend/places.json')
     const infoPetPlaces = await data.json()
     setLocals(infoPetPlaces)
   }
-
-  // const getData = async () => {
-  //   try {
-  //     const data = await db.collection('locales').get()
-  //     const arrayData = data.docs.map(doc => ({ id: doc.id, ...doc.data() }))
-  //     console.log(arrayData);
-  //     // setLocals(arrayData)
-
-  //   } catch (error) {
-  //     console.log(error)
-  //   }
-  // }
-
 
   const latlng = { lat: geolocation.latitude, lng: geolocation.longitude, }
   const center = latlng;  // {lat, lng}
@@ -59,7 +46,7 @@ const LeafMap = (props) => {
 
   return (
     <>
-      <Navbar />
+      <Navbar user={user}/>
 
       <div className="container-map">
         <MapContainer
@@ -67,24 +54,30 @@ const LeafMap = (props) => {
           zoom={zoom}
           locals={locals}
         />
+        </div>
 
         <div className="container-medio">
-          {
-            user && (
-              <p>{user.email}</p>
-            )
-          }
           <h2 className="where-go">¿A dónde vamos?</h2>
         </div>
 
-
-        <div className='container-medio'>
-          <button>Buscar lugares cercanos</button>
+        <div className="container-options">
+          <div className="optionIcono">
+            <img src={restaurant} alt="Restaurantes" width={30} />
+            <p>Restaurant</p>
+          </div>
+          <div className="optionIcono">
+            <img src={cafe} alt="Cafeterias" width={40} />
+            <p>Cafetería</p>
+          </div>
+          <div className="optionIcono" >
+            <img src={bar} alt="Bares" width={30} />
+            <p>Bar</p>
+          </div>
         </div>
 
-      </div>
-
-
+        <div className="containerButtonMedio">
+          <button className="lookForPlace">Buscar lugares cercanos</button>
+        </div>
     </>
 
   );

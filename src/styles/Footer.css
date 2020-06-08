@@ -6,9 +6,28 @@ footer {
   background-color:#fdca6e;
 }
 
+.insideButtonsFooter {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
 .navbar-footer {
   display: flex;
+  flex-direction: row;
   justify-content: space-around;
-  align-items: center;
   font-family: 'Raleway', sans-serif;
 }
+
+.backAndWorth {
+  margin-left: 10px;
+}
+
+.saveAndShare {
+  display: flex;
+  align-items: flex-end;
+  margin-right: 10px;
+}
+
