@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import '../styles/Map.css'
-import { auth, db } from '../backend/firebase'
+import { auth } from '../backend/firebase'
 import { withRouter } from 'react-router-dom'
 
 import MapContainer from './MapContainer'
@@ -16,7 +16,7 @@ const LeafMap = (props) => {
 
   const geolocation = useGeolocation()
 
-  const [locals, setLocals] = useState([]);
+  const [locals, setLocals] = useState([])
   const [user, setUser] = useState(null)
 
   useEffect(() => {
@@ -40,13 +40,29 @@ const LeafMap = (props) => {
     setLocals(infoPetPlaces)
   }
 
+  const restaurantes = () => {
+    let filtrandoLocales = locals.filter((local) => (local.type === 'restaurante')) 
+    setLocals(filtrandoLocales)
+    console.log(filtrandoLocales);
+  }
+
+  const cafeterias = () => {
+    let filtrandoLocales = locals.filter((local) => (local.type === 'cafe'))
+    console.log(filtrandoLocales);
+  }
+
+  const bares = () => {
+    let filtrandoLocales = locals.filter((local) => (local.type === 'bar'))
+    console.log(filtrandoLocales);
+  }
+
   const latlng = { lat: geolocation.latitude, lng: geolocation.longitude, }
   const center = latlng;  // {lat, lng}
   const zoom = 16;
 
   return (
     <>
-      <Navbar user={user}/>
+      <Navbar user={user} />
 
       <div className="container-map">
         <MapContainer
@@ -54,30 +70,34 @@ const LeafMap = (props) => {
           zoom={zoom}
           locals={locals}
         />
-        </div>
+      </div>
 
-        <div className="container-medio">
-          <h2 className="where-go">¿A dónde vamos?</h2>
-        </div>
+      <div className="container-medio">
+        <h2 className="where-go">¿A dónde vamos?</h2>
+      </div>
 
-        <div className="container-options">
-          <div className="optionIcono">
+      <div className="container-options">
+
+          <div className="optionIcono" onClick={() => restaurantes()}>
             <img src={restaurant} alt="Restaurantes" width={30} />
             <p>Restaurant</p>
           </div>
-          <div className="optionIcono">
-            <img src={cafe} alt="Cafeterias" width={40} />
-            <p>Cafetería</p>
-          </div>
-          <div className="optionIcono" >
-            <img src={bar} alt="Bares" width={30} />
-            <p>Bar</p>
-          </div>
+
+        <div className="optionIcono" onClick={() => cafeterias()}>
+          <img src={cafe} alt="Cafeterias" width={40} />
+          <p>Cafetería</p>
         </div>
 
-        <div className="containerButtonMedio">
-          <button className="lookForPlace">Buscar lugares cercanos</button>
+        <div className="optionIcono" onClick={() => bares()}>
+          <img src={bar} alt="Bares" width={30} />
+          <p>Bar</p>
         </div>
+
+      </div>
+
+      <div className="containerButtonMedio">
+        <button className="lookForPlace">Buscar lugares cercanos</button>
+      </div>
     </>
 
   );

@@ -1,0 +1,13 @@
+.saved-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Raleway', sans-serif;
+    color: #2F3543;
+    margin-top: 20px;
+}
+
+.saved-title {
+ text-align: center;
+}

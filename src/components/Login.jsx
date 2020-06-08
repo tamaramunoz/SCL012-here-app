@@ -77,6 +77,11 @@ const Login = (props) => {
                 uid: res.user.uid
             })
 
+            await db.collection(res.user.uid).add({
+                local: 'local de ejemplo',
+                fecha: Date.now()
+            })
+
             setMail('')
             setPassword('')
             setError(null)
