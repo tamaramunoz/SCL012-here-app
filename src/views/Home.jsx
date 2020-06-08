@@ -10,7 +10,7 @@ class Badges extends React.Component {
                     <img
                         className="Badge__avatar"
                         src={Log}
-                        alt="avatar"
+                        alt="Logo Pet Places"
                     />
                     <div>
                         <h2 className="Badge__footer">

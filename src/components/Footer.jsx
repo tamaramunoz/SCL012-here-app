@@ -28,7 +28,7 @@ const Footer = (props) => {
                                     </Link>
                                 </div>
                                 <div className="saveAndShare">
-                                    <Link className="btn" to="/map">
+                                    <Link className="btn" to="/saved">
                                         <img src={save} alt="Guardar" />
                                     </Link>
 

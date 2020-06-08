@@ -27,19 +27,18 @@
 .Badge__avatar {
   justify-content: center;
   align-items: center;
-  width: 300px;
-  height: 420px;
+  width: 200px;
 }
 
 .Badge__footer {
   font-family: 'Raleway', sans-serif;
   font-weight: bold;
-  height: 54px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   color: #2F3543;
+  font-size: 25px;
   margin-top: 40px;
 }
 

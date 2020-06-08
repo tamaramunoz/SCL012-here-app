@@ -9,6 +9,8 @@ import LeafMap from './components/LeafMap';
 import NewPag from './views/NewPag'
 import Footer from './components/Footer';
 import Loading from './components/Loading';
+import SavedPlaces from './components/SavedPlaces';
+
 
 function App() {
 
@@ -31,12 +33,13 @@ function App() {
                 <Switch>
                     <Route exact path="/" component={NewPag} />
                     <Route path="/login">
-                        <Login />
+                        <Login />"
                     </Route>
 
                     <Route path="/map" component={LeafMap} />
+                    <Route path="/saved" component={SavedPlaces} />
                 </Switch>
-
+                
                 <Footer firebaseUser={firebaseUser} />
             </Router>
         </Fragment>
