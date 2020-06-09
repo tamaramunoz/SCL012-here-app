@@ -26,10 +26,14 @@ Cada día se experimenta más con este tipo de terapia y cada vez son más los p
 
 Por lo tanto, es aquí donde nosotras hacemos nuestra intervención y aporte a esta necesidad.
 
+## Link al deploy del proyecto:
+
+https://here-61f73.web.app/
+
 
 ## Desarrollado por:
 
 - UX: Nataly Cuevas
+- Front: Tamara Muñoz
 - Front: Rena Rivero
 - Front: Veronica Urrutia
-- Front: Tamara Muñoz

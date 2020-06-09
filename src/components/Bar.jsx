@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import bar from '../icons/donde-bares.png'
+import '../styles/FilterLocals.css'
 
 const Bar = () => {
 
@@ -17,21 +17,22 @@ const Bar = () => {
     }
 
     return (
-        <div>
-            <div className="optionIcono">
-                <img src={bar} alt="Bares" width={30} />
-                <p>Bar</p>
-            </div>
+        <div className="filterContainer">
+
+            <h5 className="filterTitle">Bares</h5>
+
             <div>
                 {
-                    bares.map(item => <div key={item.key}>
-                        <div className="card">
-                            <div className="card-body">
-                                <h5 className="card-title">{item.content}</h5>
-                                <h6 className="card-subtitle mb-2 text-muted">{item.type}</h6>
+                    bares.map(item =>
+                        <div key={item.key}>
+                            <div className="card">
+                                <div className="cardBody">
+                                    <p className="card-title">{item.content}</p>
+                                    <p>{item.type}</p>
+                                </div>
                             </div>
                         </div>
-                    </div>)
+                    )
                 }
             </div>
         </div>
