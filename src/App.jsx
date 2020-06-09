@@ -10,6 +10,9 @@ import NewPag from './views/NewPag'
 import Footer from './components/Footer';
 import Loading from './components/Loading';
 import SavedPlaces from './components/SavedPlaces';
+import Restaurants from './components/Restaurants';
+import Cafe from './components/Cafe';
+import Bar from './components/Bar';
 
 
 function App() {
@@ -38,6 +41,9 @@ function App() {
 
                     <Route path="/map" component={LeafMap} />
                     <Route path="/saved" component={SavedPlaces} />
+                    <Route path="/restaurants" component={Restaurants} />
+                    <Route path="/cafes" component={Cafe} />
+                    <Route path="/bar" component={Bar} />
                 </Switch>
                 
                 <Footer firebaseUser={firebaseUser} />

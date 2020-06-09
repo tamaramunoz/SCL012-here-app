@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import '../styles/Map.css'
 import { auth } from '../backend/firebase'
-import { withRouter } from 'react-router-dom'
+import { withRouter, Link } from 'react-router-dom'
 
 import MapContainer from './MapContainer'
 import useGeolocation from 'react-hook-geolocation'
@@ -40,22 +40,6 @@ const LeafMap = (props) => {
     setLocals(infoPetPlaces)
   }
 
-  const restaurantes = () => {
-    let filtrandoLocales = locals.filter((local) => (local.type === 'restaurante')) 
-    setLocals(filtrandoLocales)
-    console.log(filtrandoLocales);
-  }
-
-  const cafeterias = () => {
-    let filtrandoLocales = locals.filter((local) => (local.type === 'cafe'))
-    console.log(filtrandoLocales);
-  }
-
-  const bares = () => {
-    let filtrandoLocales = locals.filter((local) => (local.type === 'bar'))
-    console.log(filtrandoLocales);
-  }
-
   const latlng = { lat: geolocation.latitude, lng: geolocation.longitude, }
   const center = latlng;  // {lat, lng}
   const zoom = 16;
@@ -78,20 +62,26 @@ const LeafMap = (props) => {
 
       <div className="container-options">
 
-          <div className="optionIcono" onClick={() => restaurantes()}>
+        <Link to="/restaurants">
+          <div className="optionIcono">
             <img src={restaurant} alt="Restaurantes" width={30} />
             <p>Restaurant</p>
           </div>
+        </Link>
 
-        <div className="optionIcono" onClick={() => cafeterias()}>
-          <img src={cafe} alt="Cafeterias" width={40} />
-          <p>Cafetería</p>
-        </div>
+        <Link to="/cafes">
+          <div className="optionIcono">
+            <img src={cafe} alt="Cafeterias" width={40} />
+            <p>Cafetería</p>
+          </div>
+        </Link>
 
-        <div className="optionIcono" onClick={() => bares()}>
-          <img src={bar} alt="Bares" width={30} />
-          <p>Bar</p>
-        </div>
+        <Link to="/bar">
+          <div className="optionIcono">
+            <img src={bar} alt="Bares" width={30} />
+            <p>Bar</p>
+          </div>
+        </Link>
 
       </div>
 
