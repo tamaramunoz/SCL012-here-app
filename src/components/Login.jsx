@@ -157,7 +157,7 @@ const Login = (props) => {
                 <div className="avatar-register-container">
                     <img src={Nina} alt="Imagen de registro de usuarios" className="avatar-register" />
                 </div>
-
+                
             </div>
         </Fragment>
     )
